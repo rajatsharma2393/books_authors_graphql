@@ -23,7 +23,6 @@ const BookType = new GraphQLObjectType({
       type: new GraphQLList(AuthorType),
       args: { id: { type: GraphQLID }, name: { type: GraphQLString } },
       resolve(parent, args) {
-        console.log(args);
         return Author.find({
           _id: { $in: parent.authorIds }
         });
