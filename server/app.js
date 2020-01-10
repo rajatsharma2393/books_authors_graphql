@@ -13,7 +13,7 @@ app.use(cors());
 // make sure to replace my db string & creds with your own
 mongoose.connect("mongodb://127.0.0.1:27017/default");
 mongoose.connection.once("open", () => {
-  console.log("conneted to database");
+  console.log("conneted1 to database");
 });
 
 // bind express with graphql
