@@ -17,7 +17,12 @@ class BookDetails extends Component {
               return <li key={item.id}>{item.name}</li>;
             })}
           </ul>
-          <button className="delete-button" onClick={this.handleDeleteClick}>
+          <button
+            className="delete-button"
+            onClick={() => {
+              this.props.handleDeleteBookClick(book.id);
+            }}
+          >
             Delete
           </button>
         </div>

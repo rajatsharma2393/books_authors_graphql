@@ -11,8 +11,14 @@ export default class Details extends Component {
   render() {
     return (
       <div className="details-list">
-        <BookDetails book={this.props.book} />
-        <AuthorDetails author={this.props.author} />
+        <BookDetails
+          book={this.props.book}
+          handleDeleteBookClick={this.props.handleDeleteBookClick}
+        />
+        <AuthorDetails
+          author={this.props.author}
+          handleDeleteAuthorClick={this.props.handleDeleteAuthorClick}
+        />
       </div>
     );
   }

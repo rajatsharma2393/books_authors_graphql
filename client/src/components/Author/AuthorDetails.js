@@ -21,7 +21,14 @@ class AuthorDetails extends Component {
               </ul>
             </React.Fragment>
           )}
-          <button class="delete-button">Delete</button>
+          <button
+            className="delete-button"
+            onClick={() => {
+              this.props.handleDeleteAuthorClick(author.id);
+            }}
+          >
+            Delete
+          </button>
         </div>
       );
     } else {
