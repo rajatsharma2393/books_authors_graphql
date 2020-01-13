@@ -19,7 +19,9 @@ class AuthorList extends Component {
         return (
           <li
             key={author.id}
-            onClick={e => this.setState({ selected: author.id })}
+            onClick={() => {
+              this.props.handleAuthorOnClick(author);
+            }}
           >
             {author.name}
           </li>

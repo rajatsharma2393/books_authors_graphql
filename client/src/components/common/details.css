@@ -1,0 +1,22 @@
+.details-list {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: #ad1457;
+  overflow: auto;
+  box-shadow: -2px -3px 5px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  color: #fff;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.details-list > :nth-child(1) {
+  border-bottom: 2px solid white;
+  margin-bottom: 5%;
+}
+
+.details-list > div {
+  padding: 30px;
+}

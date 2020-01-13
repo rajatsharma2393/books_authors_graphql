@@ -10,7 +10,7 @@ body {
   width: 100%;
 }
 #main {
-  width: 60%;
+  width: 70%;
 }
 
 #main h1 {
@@ -24,7 +24,7 @@ body {
 }
 .books-list,
 .authors-list {
-  width: 45%;
+  width: 50%;
   float: left;
   height: 100%;
 }
@@ -50,16 +50,16 @@ body {
   position: absolute;
   left: 0;
   bottom: 3vh;
-  width: 30%;
+  width: 20%;
 }
 
 .add-author-div {
   background: #fff;
   padding: 20px;
   position: absolute;
-  left: 57%;
+  left: 42%;
   bottom: 3vh;
-  width: 37%;
+  width: 25%;
 }
 
 .add-book .field {
@@ -110,16 +110,10 @@ body {
   right: 10px;
 }
 
-.book-details {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 40%;
-  height: 100%;
-  background: #ad1457;
-  padding: 30px;
-  overflow: auto;
-  box-shadow: -2px -3px 5px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  color: #fff;
+.delete-button {
+  width: 75px;
+  height: 30px;
+  border-radius: 10%;
+  font-size: 13px;
+  color: rgb(5, 5, 5);
 }

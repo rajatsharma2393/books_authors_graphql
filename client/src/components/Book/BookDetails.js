@@ -1,22 +1,25 @@
 import React, { Component } from "react";
-import { graphql } from "react-apollo";
-import { getBookQuery } from "../../queries/queries";
+import { graphql, compose } from "react-apollo";
+import { deleteBookQuery, getBooksQuery } from "../../queries/queries";
 
 class BookDetails extends Component {
   displayBookDetails() {
-    const { book } = this.props.data;
-    console.log(book);
+    let book = this.props.book;
     if (book) {
       return (
         <div>
+          <h1>Book Details: </h1>
           <h2>Name: {book.name}</h2>
           <p>Genre: {book.genre}</p>
-          <p>All books by this author:</p>
+          <p>All authors of this book:</p>
           <ul className="other-books">
             {book.authors.map(item => {
               return <li key={item.id}>{item.name}</li>;
             })}
           </ul>
+          <button className="delete-button" onClick={this.handleDeleteClick}>
+            Delete
+          </button>
         </div>
       );
     } else {
@@ -27,13 +30,7 @@ class BookDetails extends Component {
     return <div className="book-details">{this.displayBookDetails()}</div>;
   }
 }
-
-export default graphql(getBookQuery, {
-  options: props => {
-    return {
-      variables: {
-        id: props.bookId
-      }
-    };
-  }
-})(BookDetails);
+export default compose(
+  graphql(deleteBookQuery, { name: "deleteBookQuery" }),
+  graphql(getBooksQuery, { name: "getBooksQuery" })
+)(BookDetails);
