@@ -68,7 +68,7 @@ class Main extends Component {
     return (
       <div>
         <div id="main">
-          <h1>Ninja's Reading List</h1>
+          <h1>Rajat's Reading List</h1>
           <BookList handleBookOnClick={this.handleBookOnClick} />
           <div className="add-book-div">
             <AddBook />
