@@ -1,1 +1,1 @@
-# GraphQL BOoks Authors Demo
+# GraphQL Books Authors Demo
