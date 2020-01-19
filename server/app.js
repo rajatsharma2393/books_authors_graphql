@@ -11,9 +11,9 @@ app.use(cors());
 
 // connect to mlab database
 // make sure to replace my db string & creds with your own
-mongoose.connect("mongodb://127.0.0.1:27017/default");
+mongoose.connect("mongodb://mongo:27017/default");
 mongoose.connection.once("open", () => {
-  console.log("conneted1 to database");
+  console.log("connected to database");
 });
 
 // bind express with graphql
